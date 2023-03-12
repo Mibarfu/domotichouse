@@ -2,5 +2,5 @@
 
 [Ejemplo Live](https://mibarfu.github.io/domotichouse/)
 
-## Panel de juego
+## Interface de usuario
 ![Muestra 1](Captura.PNG)
