@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<html>
+	<head>
+		<link rel="StyleSheet" href="estilos.css" type="text/css"></link>
+		<script language="javascript" type="text/javascript" src="js/CrearObjetos.js"></script>
+		<script language="javascript" type="text/javascript" src="js/Clases.js"></script>
+		<script language="javascript" type="text/javascript" src="js/ControlInterface.js"></script>
+		<script language="javascript" type="text/javascript" src="js/GestorPaneles.js"></script>
+		<script language="javascript" type="text/javascript" src="js/ControlAjax.js"></script>
+		<script language="javascript" type="text/javascript" src="js/ControlEntradaSalida.js"></script>
+		<script language="javascript" type="text/javascript" src="js/Alarmas.js"></script>		
+	</head>
+	<body onselectstart='return false;'>
+
+		<div class="cabecera">
+			<img src="images/Logo.png" style="position: absolute;margin-top:10px;margin-left:10px;">
+			<div id="EstadoConexion"></div>
+			<div id="leer" onmouseover="PopupInforma(event, 'Actualizar informacion')" onmouseout="PopupInformaOut()" onclick="document.getElementById('menusel1').innerHTML=lista8.LeerTexto(3);"></div>
+			<div id="enviar" onmouseover="PopupInforma(event, 'Enviar informacion')" onmouseout="PopupInformaOut()" onclick="lista8.CambiarTexto(3,'adios');"></div>
+		</div>
+		<div class="cuerpo">
+			<div id="menuizquierda" >
+				<div id="menuseleccion"></div>
+				<p id="menusel1" onclick="pulsamenu(this);" >
+					Activacion
+				</p>
+				<p id="menusel2" onclick="pulsamenu(this);" >
+					Estados
+				</p>
+				<p id="menusel3" onclick="pulsamenu(this);" >
+					Alarmas
+				</p>
+				<p id="menusel4" >
+					Configuracion
+				</p>
+			</div>
+			<div id="Panel1" class="Paneles">
+				<table class="TablaActivacion1">
+					<tr  align="left">
+						<td >
+							Reles SSR
+						</td>
+						<td >
+							Reles Mecanicos
+						</td>
+					</tr>
+					<tr align="center">
+						<td >
+						<div id="InReleSSR0" class="boton1">
+							<span id="NInReleSSR0">Luz jardin</span>
+						</div></td>
+						<td >
+						<div id="InReleSSR4" class="boton1">
+							<span id="NInReleSSR4">Luz jardin</span>
+						</div>
+						</td>
+					</tr>
+					<tr align="center">
+						<td >
+						<div id="InReleSSR1" class="boton1">
+							<span id="NInReleSSR1">Luz jardin</span>
+						</div></td>
+						<td>
+						<div id="InReleSSR5" class="boton1">
+							<span id="NInReleSSR5">Luz jardin</span>
+						</div></td>
+					</tr>
+					<tr align="center">
+						<td >
+						<div id="InReleSSR2" class="boton1">
+							<span id="NInReleSSR2">Luz jardin</span>
+						</div></td>
+						<td>
+						<div id="InReleSSR6" class="boton1">
+							<span id="NInReleSSR6">Luz jardin</span>
+						</div></td>
+					</tr>
+				</table>
+				<table class="TablaActivacion2">
+					<tr align="center">
+						<td align="left">
+							Dimmers
+						</td>
+						<td></td>
+					</tr>
+
+					<tr align="center">
+						<td >
+							<div id="Poten1" style="width: 302px;" class="potenciometro">
+								<span id="NPoten1">jardin</span>
+								<div id="ValorPoten1" class="valorpoten">
+									0%
+								</div>
+								<div id="ChildPoten1" class="mandopoten1"></div>
+							</div>
+						</td>
+						<td>
+							<div id="Poten2" style="width: 302px;" class="potenciometro">
+								<span id="NPoten2">jardin</span>
+								<div id="ValorPoten2" class="valorpoten">
+									0%
+								</div>
+								<div id="ChildPoten2" class="mandopoten1"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="Panel2" class="Paneles" style="display: none">
+				<table class="TablaEstados1" >
+					<tr >
+						<td> Temperatura Equipo </td>
+					</tr>
+					<tr align="center">
+						<td>
+							<div id="Estado1" class="Estado1Off">
+								<span id="NEstado1">Garaje</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> Entradas AC </td>
+					</tr>
+					<tr align="center">
+						<td >
+						<div id="Estado2" class="Estado1Off">
+								<span id="NEstado2">Garaje</span>
+						</div></td>
+						<td>
+						<div id="Estado3" class="Estado1Off">
+								<span id="NEstado3">Garaje</span>
+						</div></td>
+					</tr>
+					<tr align="center">
+						<td>
+						<div id="Estado4" class="Estado1Off">
+								<span id="NEstado4">Garaje</span>
+						</div></td>
+						<td>
+						<div id="Estado5" class="Estado1Off">
+								<span id="NEstado5">Garaje</span>
+						</div></td>
+					</tr>
+					<tr>
+						<td> Entradas DC </td>
+					</tr>
+					<tr align="center">
+						<td>
+						<div id="Estado6" class="Estado1Off">
+								<span id="NEstado6">Garaje</span>
+						</div></td>
+						<td>
+						<div id="Estado7" class="Estado1Off">
+								<span id="NEstado7">Garaje</span>
+						</div></td>
+					</tr>
+					<tr align="center">
+						<td>
+							<div id="Estado8" class="Estado1Off">
+								<span id="NEstado8">Garaje</span>
+							</div>
+						</td>
+						<td>
+							<div id="Estado9" class="Estado1Off">
+								<span id="NEstado9">Garaje</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> Sensores 4-20 mA </td>
+					</tr>
+					<tr align="center">
+						<td>
+						<div id="Sensor1" class="SSensor1">
+							<span id="NSensor1">Extra 1</span>
+							<div id="SensorNivel1" class="SSensorNivel1"></div>
+						</div></td>
+						<td>
+						<div id="Sensor2" class="SSensor1">
+							<span id="NSensor2">Extra 1</span>
+							<div id="SensorNivel2" class="SSensorNivel1"></div>							
+						</div></td>
+					</tr>
+					<tr align="center">
+						<td>
+						<div id="Sensor3" class="SSensor1">
+							<span id="NSensor3">Extra 1</span>
+							<div id="SensorNivel3" class="SSensorNivel1"></div>							
+						</div></td>
+						<td>
+						<div id="Sensor4" class="SSensor1">
+							<span id="NSensor4">Extra 1</span>
+							<div id="SensorNivel4" class="SSensorNivel1"></div>							
+						</div></td>
+					</tr>
+					<tr>
+						<td> Sensores RED </td>
+					</tr>
+					<tr align="center">
+						<td>
+						<div id="Sensor5" class="SSensor1">
+							<span id="NSensor5">Extra 1</span>
+							<div id="SensorNivel5" class="SSensorNivel1"></div>							
+						</div></td>
+						<td>
+						<div id="Sensor6" class="SSensor1">
+							<span id="NSensor6">Extra 2</span>
+							<div id="SensorNivel6" class="SSensorNivel1"></div>							
+						</div></td>
+					</tr>
+				</table>
+			</div>
+			
+			<!-- Panel de Control de Alarmas -->
+			<div id="Panel3" class="Paneles" style="display: none">
+				<div id="BloquePanel3">
+					
+					<!-- Selector de cantidad de alarmas -->
+					<div class="PartesP3" style="width: 200px; margin-bottom: 14px">
+						<p style="margin-bottom: -8px">Numero de alarmas</p>
+						<ul style="list-style:none; padding-left:0px">
+							<li style="float: left">
+								<a class="BotonPeqP3 " onclick="contador1.Decrementar();">-</a>
+							</li>
+							<li style="float: left">
+								<a id="contador1disp" class="CajaPeqP3" >0</a>
+							</li>
+							<li style="float: left">							
+								<a class="BotonPeqP3" onclick="contador1.Incrementar();">+</a>								
+							</li>
+						</ul>						
+					</div>
+					
+					<!-- Etiqueta de Alarma -->
+					<div style="clear:left">
+						<p style="margin-bottom: -8px">Alarma</p>
+					
+					<!-- Selector de numero de alarma -->	
+					<div class="PartesP3" style="float:left; width: 200px; margin-bottom: 14px">
+						<ul style="list-style:none; padding-left:0px">
+							<li style="float: left">
+								<a class="BotonPeqP3" onclick="contador2.Decrementar();">&#60;</a>
+							</li>
+							<li style="float: left">
+								<a id="contador2disp" class="CajaPeqP3" >1</a>
+							</li>
+							<li style="float: left">							
+								<a class="BotonPeqP3" onclick="contador2.Incrementar();">&#62;</a>								
+							</li>
+						</ul>						
+					</div>						
+						
+					<!-- Conjunto de Botones: 'Activa', 'Se repite', 'Ejecutada' y 'Dia'. -->
+					<ul style="list-style:none; padding-left:0px">
+						<!-- Boton 'Activa' -->
+						<li style="float:left">
+							<a id="EstAlar1" class="BotonMedOffP3">Activa</a>
+						</li>
+						<!-- Boton 'Se repite' -->
+						<li style="float:left">
+							<a id="EstAlar2" class="BotonMedOffP3">Se repite</a>
+						</li>						
+						<!-- Boton 'Ejecutada'-->
+						<li style="float:left; margin-bottom: 9px">
+							<a id="EstAlar3" class="BotonMedOffP3">Ejecutada</a>								
+						</li>
+						<!-- Selector 'Dia' -->
+						<li class="SelectPeqP3">					
+							<select id="Lista1">
+      							<option value="1" selected="selected">Todos</option>
+       							<option value="2">Lunes</option>
+       							<option value="3">Martes</option>
+       							<option value="4">Miercoles</option>
+       							<option value="5">Jueves</option>
+       							<option value="6">Viernes</option>
+       							<option value="7">Sabado</option>
+       							<option value="8">Domingo</option>       								       								       								       								
+   							</select>
+						</li>	
+					</ul>					
+					
+				</div>
+
+				<div style="clear:left">
+					<p style="margin-bottom: 10px">Evento</p>
+					<div style="clear:left;" class="SelectGraP3">					
+						<select id="Lista2" onChange="cambiacontrolevento(this)">
+      						<option value="1" selected="selected">Entradas DC</option>
+       						<option value="2">Entradas RED</option>
+       						<option value="3">Sensores 4-20 mA</option>
+       						<option value="4">Corriente RED</option>
+       						<option value="5">Fecha y Hora</option>
+       						<option value="6">Temperatura</option>
+   						</select>
+					</div>	
+						
+						<!-- CAJAS DE LOS DIFERENTES EVENTOS -->
+					<div id="EventosTipo1" style="clear: left;">
+
+							<!-- EVENTO ENTRADAS DC -->
+							<div id="CajaEventos1"  style="display:block; padding-left: 13px;">
+								<div style="padding-top: 13px;clear: left;">
+									<span id="Check1" class="CheckOFF">DC1</span>
+									<span id="Check2" class="CheckOFF">DC2</span>
+								</div>
+								<div style="padding-top: 7px; clear: left">
+									<span id="Check3" class="CheckOFF">DC3</span>
+									<span id="Check4" class="CheckOFF">DC4</span>
+								</div>
+							</div>
+							
+                            <!-- EVENTO ENTRADAS DE RED -->
+                            <div id="CajaEventos2"  style="display:none; padding-left: 13px;">
+                                <div style="display:inline-block; position: relative; top:28px; left: 15px;" class="SelectGraP3">                   
+                                    <select id="Lista8" >
+                                        <option value="1" selected="selected">RED 1</option>
+                                        <option value="2">RED 2</option>
+                                        <option value="3">RED 3</option>
+                                        <option value="4">RED 4</option>
+                                    </select>
+                                </div>
+                             </div>  
+
+							<!-- EVENTO ENTRADAS DE SENSORES 4-20mA -->
+							<div id="CajaEventos3"  style="display:none; padding-left: 13px;">
+								<div style="display:inline-block; position: relative; top:28px; left: 15px;" class="SelectGraP3">					
+									<select id="Lista3">
+		      							<option value="1" selected="selected">Entradas 1</option>
+		       							<option value="2">Entrada 2</option>
+		       							<option value="3">Entrada 3</option>
+		       							<option value="4">Entrada 4</option>
+		   							</select>
+								</div>	
+								<div id="Poten3" style="width:302px; display: inline-block; top:9px; left:46px;" class="potenciometro">
+									<span style="text-align: center" id="NPoten3">jardin</span>
+									<div id="ValorPoten3" class="valorpoten">
+										0%
+									</div>
+									<div id="ChildPoten3" class="mandopoten1"></div>
+								</div>															
+							</div>
+
+							<!-- EVENTO ENTRADAS DE SENSORES DE RED -->
+							<div id="CajaEventos4"  style="display:none; padding-left: 13px;">
+								<div style="display:inline-block; position: relative; top:28px; left: 15px;" class="SelectGraP3">					
+									<select id="Lista4">
+		      							<option value="1" selected="selected">Entradas 1</option>
+		       							<option value="2">Entrada 2</option>
+		   							</select>
+								</div>	
+								<div id="Poten4" style="width:302px; display: inline-block; top:9px; left:46px;" class="potenciometro">
+									<span style="text-align: center" id="NPoten4">jardin</span>
+									<div id="ValorPoten4" class="valorpoten">
+										0%
+									</div>
+									<div id="ChildPoten4" class="mandopoten1"></div>
+								</div>															
+							</div>							
+						
+							<!-- EVENTO FECHA Y HORA -->
+							<div id="CajaEventos5" Style="display: none; padding-left: : 13px;">
+								<div style="position: relative; left:  15px; top: 15px;">
+									<input type="text" name="Hora"  Maxlength="2" value="00" class="CajaTexto" style="width:40px;"/>
+									<input type="text" name="Minutos" Maxlength="2" value="00" class="CajaTexto" style="width:40px;"/>
+									<input type="text" name="Segundos" 	Maxlength="2" value="00" class="CajaTexto" style="width:40px;"/>																		
+								</div>
+								<div style="position: relative; left: 15px; top: 27px;">
+									<div style="float:left;" class="SelectMinP3">					
+										<select id="Lista5">
+			      							<option value="1" selected="selected">1</option>
+			       							<option value="2">2</option>
+			       							<option value="3">3</option>
+			       							<option value="4">4</option>
+			       							<option value="5">5</option>
+			       							<option value="6">6</option>
+			      							<option value="7">7</option>
+			      							<option value="8">8</option>
+			       							<option value="9">9</option>
+			       							<option value="10">10</option>
+			       							<option value="11">11</option>
+			       							<option value="12">12</option>
+			       							<option value="13">13</option>
+			      							<option value="14">14</option>
+			       							<option value="15">15</option>
+			       							<option value="16">16</option>
+			       							<option value="17">17</option>
+			       							<option value="18">18</option>
+			       							<option value="19">19</option>
+			      							<option value="20">20</option>
+			       							<option value="21">21</option>
+			       							<option value="22">22</option>
+			       							<option value="23">23</option>
+			       							<option value="24">24</option>
+			       							<option value="25">25</option>
+											<option value="26">26</option>
+			       							<option value="27">27</option>
+			       							<option value="28">28</option>
+			       							<option value="29">29</option>
+			       							<option value="30">30</option>
+			       							<option value="31">31</option>		       							
+			   							</select>
+			   						</div>								
+									<div style="left: 7px; position:relative; display:inline-block;" class="SelectPeqP3">		   							
+										<select id="Lista6">
+			      							<option value="1" selected="selected">Enero</option>
+			       							<option value="2">Febrero</option>
+			       							<option value="3">Marzo</option>
+			       							<option value="4">Abril</option>
+			       							<option value="5">Mayo</option>
+			       							<option value="6">Junio</option>
+			      							<option value="7">Julio</option>
+			      							<option value="8">Agosto</option>
+			       							<option value="9">Septiembre</option>
+			       							<option value="10">Octubre</option>
+			       							<option value="11">Noviembre</option>
+			       							<option value="12">Diciembre</option>
+										</select>
+									</div>
+									<div style="left: 7px; position:relative; display: inline-block;" class="SelectPeqP3">		
+   							
+										<select id="Lista6">
+			      							<option value="-5">2007</option>
+			       							<option value="-4">2008</option>
+			       							<option value="-3">2009</option>
+			       							<option value="-2">2010</option>
+			       							<option value="-1">2011</option>
+			       							<option value="0" selected="selected">2012</option>
+			      							<option value="1">2013</option>
+			      							<option value="2">2014</option>
+			       							<option value="3">2015</option>
+			       							<option value="4">2016</option>
+			       							<option value="5">2017</option>
+			       							<option value="6">2018</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<!-- EVENTO TEMPERATURA INTERNA -->
+							<div id="CajaEventos6" Style="display: none; padding-left: : 13px;">
+								<div style="left: 30px;top: 34px; position: relative;">
+									<input type="text" name="Temperatura"  Maxlength="2" value="00" class="CajaTexto" style="width:40px;"/>
+									<span>ºC</span>
+								</div>							
+							</div>
+					</div>
+
+
+					<div style="clear:left">
+						<p style="margin-bottom: 10px">Ejecucion</p>
+						<div class="SelectGraP3" >					
+							<select id="Lista7">
+      							<option value="1" selected="selected">Activar Reles y SSRs</option>
+       							<option value="2">Activar Dimmers</option>
+       							<option value="3">Enviar 422 Radio Ethernet</option>
+       							<option value="4">Hacer BEEP</option>
+   							</select>
+						</div>					
+						<div id="EjecucionTipo1" style="clear: left">
+						</div>
+					</div>
+					
+				</div>
+	
+	
+			</div>
+	
+			<div id="Popup1" class="PopupEstilo1" style="display:none" ></div>
+			<div id="bloqueo" style="display:none;">
+				<div id="BloqueoProgreso"></div>
+			</div>
+	</body>
+</html>

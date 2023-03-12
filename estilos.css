@@ -1,0 +1,493 @@
+html, body {
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-image: url('images/background.png');
+	background-repeat: repeat;
+}
+
+.cabecera {
+	z-index: 1;
+	width: 100%;
+	height: 80px;
+}
+
+#EstadoConexion {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-image: none;
+	background-position: left;
+	padding-left: 27px;
+	top: 52px;
+	left: 252px;
+	font-family: "Arial Rounded MT Bold";
+	font-size: 20px;
+	color: white;
+}
+
+#leer {
+	position: absolute;
+	top: 35px;
+	left: 85%;
+	background-image: url('images/sprites.png');
+	width: 32px;
+	height: 32px;
+	background-position: -24px -160px;
+	cursor: pointer;
+}
+
+#enviar {
+	position: absolute;
+	top: 35px;
+	left: 90%;
+	background-image: url('images/sprites.png');
+	width: 32px;
+	height: 32px;
+	background-position: -63px -160px;
+	cursor: pointer;
+}
+
+.CajaTexto {
+	background-color:rgb(26, 26, 26);
+	color:rgb(184, 184, 184);
+	border-width:1px;
+	border-color:rgb(0, 0, 0);
+	text-align:center;
+	padding:0px 0px 0px 0px;
+	margin:0px;
+	border-radius:5px;
+}
+.PopupEstilo1 {
+	position: absolute;
+	z-index: 999;
+	width: auto;
+	height: auto;
+	padding: 0px 5px 5px 5px;
+	background-color: black;
+	border-radius: 4px;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+}
+.PopupEstilo1 li{
+
+	cursor:pointer; list-style: none; text-align:left; 
+}
+.PopupEstilo1 li:hover {
+	color: #993D48;
+}
+
+.cuerpo {
+	z-index: 1;
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#menuizquierda {
+	z-index: 1;
+	width: 180px;
+	font-family: "Arial Rounded MT Bold";
+	font-size: 20px;
+	line-height: 12px;
+	color: white;
+	float: left;
+}
+
+#menuizquierda p {
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+#menuizquierda p:hover {
+	color: #993D48;
+}
+
+#menuseleccion {
+	z-index: 0;
+	position: absolute;
+	top: 93px;
+	margin-left: 20px;
+	width: 180px;
+	height: 30px;
+	background-color: #993D48;
+	border-radius: 7px;
+	opacity: 0.5;
+}
+
+.Paneles {
+	z-index: 1;
+	position: absolute;
+	margin-left: 250px;
+	width: 70%;
+	height: 85%;
+	border-radius: 7px;
+	background-repeat: repeat;
+	background-image: url('images/pattern.png');
+	box-shadow: 6px 6px 11px #000000;
+}
+
+.TablaActivacion1, .TablaActivacion2, .TablaEstados1 {
+ 	color: gray;
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+	text-shadow: 1px 1px black;
+}
+
+.PartesP3 {
+	float: left;
+}
+.BotonPeqP3 {
+	display:inline-block;
+	margin-right:5px;
+	background-image: url('images/sprites.png');
+	width: 42px;
+	height: 27px;
+	background-position: -559px -3px;	
+	color: rgb(190,190,190);
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;	
+}
+.CajaPeqP3 {
+	display:inline-block;
+	margin-right:5px;
+	background-image: url('images/sprites.png');
+	width: 39px;
+	height: 28px;
+	background-position: -561px -43px;	
+	color: rgb(190,190,190);
+	text-align: center;
+	line-height: 25px;
+}
+
+.BotonMedOffP3 {
+	display:inline-block;
+	margin-right:5px;
+	background-image: url('images/sprites.png');
+	width: 133px;
+	height: 29px;
+	background-position: -105px -156px;	
+	color: rgb(190,190,190);
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;	
+}
+
+.CheckOFF, .CheckON, .RadioOFF, .RadioON {
+	display: block ;
+	float:left;
+	margin-right:5px;
+	background-image: url('images/sprites.png');
+	width: 236px;
+	height: 30px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;	
+}
+
+.CheckOFF, .RadioOFF {
+	background-position: -613px -8px;		
+}
+
+.CheckON {
+	background-position: -612px -47px;
+}
+
+.RadioON {
+	background-position: -640px -91px;
+}
+
+.SelectMinP3 {
+    overflow: hidden;
+    background: url('images/sprites.png');   
+	width: 71px;
+	height: 29px;
+	background-position: -276px -220px;	   
+}
+.SelectMinP3 select {
+   	background: transparent;
+   	width: 80px;
+   	padding-left: 29px;
+   	font-size: 16px;
+   	border: transparent;
+   	height: 34px;
+   	-webkit-appearance: none;
+	color: rgb(190,190,190);
+	text-align: center;	
+	outline: 0px;
+}
+
+.SelectMinP3 select option {
+	color:#993D48;
+	background:#0f0f0f;	
+}
+
+.SelectPeqP3 {
+    overflow: hidden;
+    background: url('images/sprites.png');   
+	width: 134px;
+	height: 29px;
+	background-position: -104px -220px;	   
+}
+.SelectPeqP3 select {
+   	background: transparent;
+   	width: 268px;
+   	padding-left: 29px;
+   	font-size: 16px;
+   	border: transparent;
+   	height: 34px;
+   	-webkit-appearance: none;
+	color: rgb(190,190,190);
+	text-align: center;	
+	outline: 0px;
+}
+
+.SelectPeqP3 select option {
+	color:#993D48;
+	background:#0f0f0f;	
+}
+
+.SelectGraP3 {
+    overflow: hidden;
+    background: url('images/sprites.png');   
+	width: 231px;
+	height: 29px;
+	background-position: -329px -180px;	   
+}
+.SelectGraP3 select {
+   	background: transparent;
+   	width: 268px;
+   	padding-left: 29px;
+   	font-size: 16px;
+   	border: transparent;
+   	height: 34px;
+   	-webkit-appearance: none; 
+	color: rgb(190,190,190);
+	text-align: center;	
+	outline: 0px;
+}
+
+.SelectGraP3 select option {
+	color:#993D48;
+	background:#0f0f0f;	
+}
+
+
+#BloquePanel3 {
+	padding-left:20px;
+}
+
+#BloquePanel3 > div {
+ 	color: gray;
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+	text-shadow: 1px 1px black;
+}
+
+#EventosTipo1, #EjecucionTipo1 {
+	width:98%;
+	height:90px;
+	background-image: url('images/background-dark.png');
+	background-repeat: repeat;	
+	border-radius: 7px;
+	position:relative;
+	top:6px;
+	box-shadow: 2px 2px 6px black;
+}
+
+.TablaActivacion1 {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+.TablaActivacion2 {
+	position: absolute;
+	top: 350px;
+	width: 100%;
+}
+
+.TablaActivacion1 td, .TablaActivacion2 td , .TablaEstados1 {
+	padding: 10px;
+}
+
+/* Boton on y off */
+.boton1 , .boton2 {
+	position: relative;
+	background-image: url('images/sprites.png');
+	display: block;
+	width: 302px;
+	height: 49px;
+	cursor: pointer;
+}
+
+.boton1 {
+	background-position: 0px -51px;	
+}
+
+.boton2 {
+	background-position: 0px 0px;
+}
+
+.boton1 span , .boton2 span {
+    position:relative;
+    display:block;
+    top:15px;
+	color: rgb(190,190,190);
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+}
+
+/* Boton on y off */
+.boton3 , .boton4 {
+	display:inline-block;
+	margin-right:5px;
+	background-image: url('images/sprites.png');
+	width: 133px;
+	height: 29px;
+	color: rgb(190,190,190);
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;	
+}
+
+.boton3 {
+	background-position: -105px -156px;	
+}
+
+.boton4 {
+	background-position: -105px -187px;
+}
+
+
+.potenciometro {
+	position: relative;
+	background-image: url('images/sprites.png');
+	width: 302px;
+	height: 49px;
+	background-position: 0px -103px;
+}
+
+.potenciometro span {
+    position:relative;
+    display:block;
+    top:2px;
+	color: rgb(190,190,190);
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+}
+
+.mandopoten1 {
+	position: absolute;
+	background-image: url('images/sprites.png');
+	width: 16px;
+	height: 23px;
+	background-position: 0px -184px;
+	cursor: pointer;
+	top:26px;
+}
+.valorpoten {
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+	color: rgb(190,190,190);
+	position:absolute;
+	right:6px;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+.TablaEstados1 {
+	position: absolute;
+	width: 100%;
+	height:100%;
+	top:-4px;
+}
+
+.Estado1On , .Estado1Off{
+	display:block;
+	position: relative;
+	background-image: url('images/sprites.png');
+	width: 236px;
+	height: 30px;
+}
+
+.Estado1Off {
+	background-position:-311px -51px;
+}
+.Estado1On {
+	background-position: -311px -6px;
+}
+
+.Estado1On span, .Estado1Off span {
+    position:relative;
+    top:5px;
+	color: rgb(190,190,190);
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+}
+
+
+.SSensor1 {
+	position: relative;
+	display: block;
+	background-image: url('images/sprites.png');
+	width: 236px;
+	height: 42px;
+	background-position: -310px -105px;
+}
+.SSensor1 span {
+	position:relative;
+	display:block;
+	top:3px;
+	color: rgb(190,190,190);
+	font-family: "Arial Rounded MT Bold";
+	font-size: 15px;	
+}
+
+.SSensorNivel1 {
+	position: absolute;
+	left:18px;
+	top:25px;
+	background-image: url('images/sprites.png');
+	width: 205px;
+	height: 10px;
+	background-position: -329px -156px;	
+}
+
+
+
+
+#bloqueo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 998;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.7;
+}
+
+#BloqueoProgreso {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-image: none;
+	background-position: left;
+	padding-left: 27px;
+	top: 45%;
+	left: 45%;
+	font-family: "Arial Rounded MT Bold";
+	font-size: 20px;
+	color: white;
+}
